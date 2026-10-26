@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+@theme {
+  /* ---------- Brand ---------- */
+  --color-brand: #4A2E1A;            /* espresso — header, footer, primary buttons, prices */
+  --color-brand-deep: #2B1A0E;       /* announcement bar, Subscribe button, favicon */
+  --color-brand-walnut: #5C3A21;     /* alternate accent */
+  --color-brand-umber: #8B5E3C;      /* alternate accent (lighter) */
+
+  /* ---------- Text (ink) ---------- */
+  --color-ink: #1C1611;              /* primary text */
+  --color-ink-strong: #2A211A;       /* links, secondary headings */
+  --color-ink-muted: #4F463E;        /* body copy, labels */
+  --color-ink-subtle: #6E645B;       /* captions, meta, placeholders */
+
+  /* ---------- Text on brown ---------- */
+  --color-on-brand: #FFFFFF;
+  --color-on-brand-soft: #F3E9DE;    /* secondary text on brown */
+  --color-on-brand-muted: #EADBC9;   /* eyebrows / captions on brown */
+  --color-on-brand-faint: #D9C6B0;   /* admin sidebar section labels */
+
+  /* ---------- Surfaces ---------- */
+  --color-surface: #FFFFFF;          /* page background */
+  --color-surface-cream: #F7F2EC;    /* "The Edit", order summary, side panels */
+  --color-surface-sand: #F5EEE6;     /* services band, success messages, app-icon tile */
+  --color-surface-selected: #F3ECE4; /* selected size / delivery option */
+  --color-surface-admin: #F7F3EE;    /* admin app background */
+  --color-surface-hover: #FBF8F4;    /* admin table row hover */
+
+  /* ---------- Borders ---------- */
+  --color-line: #E8E1D9;             /* dividers, card borders */
+  --color-line-soft: #EFE8DF;        /* table row dividers */
+  --color-line-admin: #E3D9CD;       /* admin inputs / top bar */
+  --color-field: #CFC3B6;            /* form field borders */
+  --color-line-strong: #B5A797;      /* outline buttons */
+  --color-line-dashed: #A89A8B;      /* "Hidden" / "Returned" outlines */
+
+  /* ---------- Status ---------- */
+  --color-status-toship: #4A2E1A;    /* filled brown chip, white text */
+  --color-status-shipped: #4A2E1A;   /* outlined brown chip */
+  --color-status-delivered: #EFE6DA; /* cream chip, ink text */
+  --color-status-returned: #A89A8B;  /* dashed outline chip */
+  --color-warning: #8A3B12;          /* low stock (always with icon + text) */
+
+  /* ---------- Image placeholder gradient stops ---------- */
+  --color-placeholder-1: #FBF7F2;
+  --color-placeholder-2: #F0E7DD;
+  --color-placeholder-3: #E6D9CB;
+
+  /* ---------- Typography ---------- */
+  --font-display: var(--font-bodoni), "Bodoni Moda", Didot, Georgia, serif;
+  --font-sans: var(--font-manrope), "Manrope", "Helvetica Neue", Arial, sans-serif;
+
+  --text-2xs: 0.625rem;   --text-2xs--line-height: 1.4;   /* 10px  tiny tags */
+  --text-xs: 0.75rem;     --text-xs--line-height: 1.5;    /* 12px  meta, eyebrows */
+  --text-sm: 0.8125rem;   --text-sm--line-height: 1.55;   /* 13px  labels, buttons */
+  --text-base: 0.9375rem; --text-base--line-height: 1.6;  /* 15px  body */
+  --text-md: 1rem;        --text-md--line-height: 1.6;    /* 16px  inputs, lead */
+  --text-lg: 1.125rem;    --text-lg--line-height: 1.6;    /* 18px  hero intro */
+  --text-xl: 1.5rem;      --text-xl--line-height: 1.25;   /* 24px  card titles */
+  --text-2xl: 1.75rem;    --text-2xl--line-height: 1.15;  /* 28px  wordmark, section titles */
+  --text-3xl: 2.25rem;    --text-3xl--line-height: 1.1;   /* 36px  admin page title */
+  --text-4xl: 2.75rem;    --text-4xl--line-height: 1.05;  /* 44px  section headings */
+  --text-5xl: 3.5rem;     --text-5xl--line-height: 1.05;  /* 56px  feature headings */
+  --text-6xl: 4rem;       --text-6xl--line-height: 1;     /* 64px  page titles */
+  --text-hero: clamp(2.875rem, 7vw, 6.75rem);             /* 46px → 108px hero */
+  --text-hero--line-height: 0.98;
+
+  --tracking-tightest: -0.02em;      /* display headlines */
+  --tracking-button: 0.1em;          /* uppercase buttons */
+  --tracking-eyebrow: 0.26em;        /* small uppercase labels */
+  --tracking-wordmark: 0.34em;       /* MERIDIAN wordmark */
+
+  /* ---------- Radius ---------- */
+  /* Storefront is square-edged (radius 0). Rounded corners are for pills,
+     badges and the admin app. */
+  --radius-xs: 0.1875rem;  /* 3px  chart bars (mobile) */
+  --radius-sm: 0.25rem;    /* 4px  chart bars */
+  --radius-md: 0.5rem;     /* 8px  admin buttons & inputs */
+  --radius-lg: 0.75rem;    /* 12px admin cards */
+  --radius-xl: 0.875rem;   /* 14px staff sign-in card */
+  --radius-icon: 1.625rem; /* 26px app icon tile (112px) */
+
+  /* ---------- Shadows ---------- */
+  --shadow-card: 0 1px 2px rgb(43 26 14 / 0.04), 0 12px 32px rgb(43 26 14 / 0.06);
+  --shadow-sticky: 0 -8px 24px rgb(43 26 14 / 0.06);  /* mobile sticky bars */
+
+  /* ---------- Layout ---------- */
+  --container-site: 85rem;      /* 1360px max content width */
+  --container-form: 27.5rem;    /* 440px auth / staff card */
+  --spacing-gutter: 2.5rem;     /* 40px desktop side padding */
+  --spacing-gutter-mobile: 1rem;/* 16px phone side padding */
+  --spacing-section: 7rem;      /* 112px desktop section spacing */
+  --spacing-section-mobile: 3.5rem; /* 56px phone section spacing */
+
+  /* ---------- Control sizes ---------- */
+  --spacing-tap: 2.75rem;       /* 44px minimum touch target */
+  --spacing-input: 3.25rem;     /* 52px inputs */
+  --spacing-button: 3.5rem;     /* 56px primary buttons */
+  --spacing-header: 3.75rem;    /* 60px mobile header */
+
+  /* ---------- Motion ---------- */
+  --ease-soft: cubic-bezier(0.2, 0.7, 0.2, 1);   /* image zoom on hover */
+  --animate-duration-fast: 150ms;
+  --animate-duration-base: 200ms;
+  --animate-duration-slow: 500ms;
+}
+
+/* ---------- Reusable utilities ---------- */
+@utility bg-placeholder {
+  background: radial-gradient(
+    ellipse at 50% 36%,
+    var(--color-placeholder-1) 0%,
+    var(--color-placeholder-2) 58%,
+    var(--color-placeholder-3) 100%
+  );
+}
+
+@utility eyebrow {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+}
+
+@utility wordmark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wordmark);
+  text-transform: uppercase;
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
+
+/* ---------- Base ---------- */
+@layer base {
+  html { color: var(--color-ink); background: var(--color-surface); }
+  body { font-family: var(--font-sans); }
+  input, select, textarea { font-size: 16px; } /* stops iOS zoom on focus */
+  ::placeholder { color: var(--color-ink-subtle); }
+  input[type="checkbox"], input[type="radio"] { accent-color: var(--color-brand); }
+  :focus-visible { outline: 2px solid var(--color-brand); outline-offset: 2px; }
+}
+
